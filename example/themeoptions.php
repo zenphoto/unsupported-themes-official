@@ -3,7 +3,7 @@
 class ThemeOptions {
 
 	
-	function ThemeOptions() {
+	function __construct() {
 		/* put any setup code needed here */
 		setThemeOptionDefault('Allow_search', true);
 		setThemeOptionDefault('Use_flv_playlist', false);
