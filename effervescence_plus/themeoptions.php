@@ -56,14 +56,14 @@ class ThemeOptions {
 			setThemeOption('custom_index_page', 'gallery', NULL, 'effervescence_plus', false);
 		}
 		if (class_exists('cacheManager')) {
-			cacheManager::deleteThemeCacheSizes($me);
+			cacheManager::deleteCacheSizes($me);
 			$img_wmk = getOption('fullimage_watermark') ? true : null;
-			$img_effect = getThemeOption('image_gray') ? 'gray' : null;
-			cacheManager::addThemeCacheSize($me, 595, NULL, NULL, NULL, NULL, NULL, NULL, false, $img_wmk, $img_effect, NULL);
-			cacheManager::addThemeDefaultThumbSize($me);
+			$img_effect = getOption('image_gray') ? 'gray' : null;
+			cacheManager::addCacheSize($me, 595, NULL, NULL, NULL, NULL, NULL, NULL, false, $img_wmk, $img_effect, NULL);
+			cacheManager::addDefaultThumbSize($me);
 			$thumb_wmk = getOption('Image_watermark') ? true : null;
-			$thumb_effect = getThemeOption('thumb_gray') ? 'gray' : null;
-			cacheManager::addThemeCacheSize($me, NULL, 180, 80, NUll, NULL, NULL, NULL, true, $thumb_wmk, $thumb_effect, NULL);
+			$thumb_effect = getOption('thumb_gray') ? 'gray' : null;
+			cacheManager::addCacheSize($me, NULL, 180, 80, NUll, NULL, NULL, NULL, true, $thumb_wmk, $thumb_effect, NULL);
 		}
 		if (function_exists('createMenuIfNotExists')) {
 			$menuitems = array(
