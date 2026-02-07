@@ -17,8 +17,8 @@ class imagegallery {
 
 	function theme_head($_zp_themeroot) {
 		?>
-		<link rel="stylesheet" type="text/css" href="<?php echo WEBPATH . '/' . ZENFOLDER . '/' . COMMON_FOLDER; ?>/adGallery/jquery.ad-gallery.css">
-		<script type="text/javascript" src="<?php echo WEBPATH . '/' . ZENFOLDER . '/' . COMMON_FOLDER; ?>/adGallery/jquery.ad-gallery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="<?php echo $_zp_themeroot; ?>/adGallery/jquery.ad-gallery.css">
+		<script type="text/javascript" src="<?php echo $_zp_themeroot; ?>/adGallery/jquery.ad-gallery.min.js"></script>
 		<?php
 	}
 
@@ -38,7 +38,7 @@ class imagegallery {
 					display_next_and_prev: true, // Can you navigate by clicking on the left/right on the image?
 					display_back_and_forward: true, // Are you allowed to scroll the thumb list?
 					scroll_jump: 0, // If 0, it jumps the width of the container
-					loader_image: '<?php echo WEBPATH . '/' . ZENFOLDER . '/' . COMMON_FOLDER; ?>/adGallery/loader.gif',
+					loader_image: '<?php echo $_zp_themeroot; ?>/adGallery/loader.gif',
 					slideshow: {
 						enable: true,
 						autostart: true,
